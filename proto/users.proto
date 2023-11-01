@@ -2,15 +2,15 @@ syntax = "proto3";
 
 package users;
 
-service UserService {
+service UsersService {
 
-  rpc SignUp (SignUpRequest) returns (SingUpResponse) {}
+  rpc SignUp (SignUpRequest) returns (SignUpResponse) {}
 
   rpc Login (LoginRequest) returns (LoginResponse) {}
 
   rpc Validate (ValidateRequest) returns (ValidateResponse) {}
 
-  rpc Logout (LogoutRequest) return (LogoutResponse) {}
+  rpc Logout (LogoutRequest) returns (LogoutResponse) {}
 
 }
 
@@ -23,7 +23,7 @@ message SignUpRequest {
   string phoneNumber = 5;
 }
 
-message SingUpResponse {
+message SignUpResponse {
   int32 status = 1;
   repeated string error = 2;
 }
