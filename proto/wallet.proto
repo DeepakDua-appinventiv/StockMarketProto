@@ -1,6 +1,5 @@
 syntax = "proto3";
 package wallet;
-// import "users.proto";
 
 service WalletService {
 
