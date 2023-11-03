@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package shares;
+
+service SharesService {
+    rpc getShare (GetShareRequest) returns (GetShareResponse) {}
+}
+
+//Get Share
+message Share {
+    string id = 1;
+    string name = 2;
+    string exchange = 3;
+    int32 currentPrice = 4;
+}
+  
+
+message GetShareRequest {
+    string userId = 1;
+    string name = 2;
+}
+  
+  message GetShareResponse {
+    int32 status = 1;
+    Share shares = 2;
+    repeated string error = 3;
+
+}
