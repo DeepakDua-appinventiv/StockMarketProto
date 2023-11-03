@@ -16,7 +16,6 @@ message Share {
   
 
 message GetShareRequest {
-    string userId = 1;
     string name = 2;
 }
   
