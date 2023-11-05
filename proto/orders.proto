@@ -5,7 +5,7 @@ package orders;
 service OrdersService {
     rpc sellShare (SellShareRequest) returns (SellShareResponse) {}
 
-    rpc buySHare (BuyShareRequest) returns (BuyShareResponse) {}
+    rpc buyShare (BuyShareRequest) returns (BuyShareResponse) {}
 }
 
 message SellShare {
