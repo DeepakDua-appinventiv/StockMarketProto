@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package orders;
+
+service OrdersService {
+    rpc sellShare (SellShareRequest) returns (SellShareResponse) {}
+
+    rpc buySHare (BuyShareRequest) returns (BuyShareResponse) {}
+}
+
+message SellShare {
+    string shareId = 1;
+    int32 qty = 2;
+    int32 askPrice = 3;
+}
+
+message BuyShare {
+    string shareId = 1;
+    int32 qty = 2;
+}
+  
+//SellShare
+message SellShareRequest {
+    string userId = 1;
+    SellShare share = 2;
+}
+
+message SellShareResponse {
+    string status = 1;
+    string message = 2;
+}
+
+//BuyShare
+message BuyShareRequest {
+    string userId = 1;
+    BuyShare share = 2;
+}
+
+message BuyShareResponse {
+    string status = 1;
+    string message = 2;
+}
+
