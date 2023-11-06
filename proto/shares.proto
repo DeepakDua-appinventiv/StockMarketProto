@@ -10,10 +10,9 @@ service SharesService {
 message Share {
     string id = 1;
     string name = 2;
-    string user = 3;
-    string exchange = 4;
-    int32 currentPrice = 5;
-    int32 quantity = 6;
+    string exchange = 3;
+    int32 currentPrice = 4;
+    int32 quantity = 5;
 }
   
 
