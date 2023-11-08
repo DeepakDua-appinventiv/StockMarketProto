@@ -40,6 +40,6 @@ message GetCompanyRequest {
 
 message GetCompanyResponse {
     int32 status = 1;
-    Company companies = 2;
+    repeated Company companies = 2;
     repeated string error = 3;
 }
