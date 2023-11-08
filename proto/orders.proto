@@ -10,7 +10,7 @@ service OrdersService {
 
 //Get Shares of a company
 message Share {
-    string id = 1;
+    string _id = 1;
     string userId = 2;
     string companyId = 3;
     int32 askPrice = 4;
