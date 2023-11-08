@@ -3,9 +3,18 @@ syntax = "proto3";
 package orders;
 
 service OrdersService {
+    rpc getShare (GetShareRequest) returns (GetShareResponse) {}
     rpc sellShare (SellShareRequest) returns (SellShareResponse) {}
-
     rpc buyShare (BuyShareRequest) returns (BuyShareResponse) {}
+}
+
+//Get Shares of a company
+message Share {
+    string id = 1;
+    string userId = 2;
+    string companyId = 3;
+    int32 askPrice = 4;
+    repeated string pendingShares = 5;
 }
 
 message SellShare {
@@ -17,6 +26,16 @@ message SellShare {
 message BuyShare {
     string shareId = 1;
     int32 qty = 2;
+}
+
+message GetShareRequest {
+    string companyId = 1;
+}
+  
+message GetShareResponse {
+    int32 status = 1;
+    repeated Share shares = 2;
+    repeated string error = 3; 
 }
   
 //SellShare

@@ -7,13 +7,13 @@ service SharesService {
     rpc getShare (GetShareRequest) returns (GetShareResponse) {}
 }
 
-//Get Share
+//Get Shares of a company
 message Share {
     string id = 1;
-    string name = 2;
-    string exchange = 3;
-    int32 currentPrice = 4;
-    int32 quantity = 5;
+    string userId = 2;
+    string companyId = 3;
+    int32 askPrice = 4;
+    repeated string pendingShares = 5;
 }
 
 //Get Company
@@ -21,18 +21,15 @@ message Company {
     string name = 1;
     string industry = 2;
 }
-  
 
 message GetShareRequest {
-    string userId = 1;
-    string name = 2;
+    string companyId = 1;
 }
   
   message GetShareResponse {
     int32 status = 1;
-    Share shares = 2;
-    repeated string error = 3;
-    
+    repeated Share shares = 2;
+    repeated string error = 3; 
 }
 
 message GetCompanyRequest {
