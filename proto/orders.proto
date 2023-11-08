@@ -6,6 +6,8 @@ service OrdersService {
     rpc getShare (GetShareRequest) returns (GetShareResponse) {}
     rpc sellShare (SellShareRequest) returns (SellShareResponse) {}
     rpc buyShare (BuyShareRequest) returns (BuyShareResponse) {}
+    rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
+    rpc UpdateBalance (UpdateBalanceRequest) returns (UpdateBalanceResponse) {} 
 }
 
 //Get Shares of a company
@@ -20,11 +22,6 @@ message SellShare {
     string shareId = 1;
     int32 qty = 2;
     int32 askPrice = 3;
-}
-
-message BuyShare {
-    string shareId = 1;
-    int32 qty = 2;
 }
 
 message GetShareRequest {
@@ -51,11 +48,35 @@ message SellShareResponse {
 //BuyShare
 message BuyShareRequest {
     string userId = 1;
-    BuyShare share = 2;
+    string shareId = 2;
+    int32 qty = 3;
 }
 
 message BuyShareResponse {
     string status = 1;
     string message = 2;
+}
+
+// GetBalance
+message GetBalanceRequest {
+    string userId = 1;
+}
+  
+message GetBalanceResponse {
+    int32 status = 1;
+    repeated string error = 2;
+    int32 walletAmount = 3;
+}
+  
+// UpdateBalance
+message UpdateBalanceRequest {
+    string userId = 1;
+    int32 walletAmount = 2;
+    string serviceName = 3;
+}
+  
+message UpdateBalanceResponse {
+    int32 status = 1;
+    repeated string error = 2;
 }
 
