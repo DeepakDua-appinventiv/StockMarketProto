@@ -3,6 +3,7 @@ syntax = "proto3";
 package shares;
 
 service SharesService {
+    rpc searchCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
     rpc getShare (GetShareRequest) returns (GetShareResponse) {}
 }
 
@@ -13,6 +14,12 @@ message Share {
     string exchange = 3;
     int32 currentPrice = 4;
     int32 quantity = 5;
+}
+
+//Get Company
+message Company {
+    string name = 1;
+    string industry = 2;
 }
   
 
@@ -26,4 +33,13 @@ message GetShareRequest {
     Share shares = 2;
     repeated string error = 3;
     
+}
+
+message GetCompanyRequest {
+}
+
+message GetCompanyResponse {
+    int32 status = 1;
+    Company companies = 2;
+    repeated string error = 3;
 }
