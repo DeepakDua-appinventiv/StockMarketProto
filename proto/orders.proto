@@ -10,11 +10,10 @@ service OrdersService {
 
 //Get Shares of a company
 message Share {
-    string _id = 1;
-    string userId = 2;
-    string companyId = 3;
-    int32 askPrice = 4;
-    repeated string pendingShares = 5;
+    string userId = 1;
+    string companyId = 2;
+    int32 askPrice = 3;
+    repeated string pendingShares = 4;
 }
 
 message SellShare {
