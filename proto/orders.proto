@@ -19,8 +19,8 @@ message Share {
 }
 
 message SellShare {
-    string shareId = 1;
-    int32 qty = 2;
+    string companyId = 1;
+    int32 sharesToSell = 2;
     int32 askPrice = 3;
 }
 
@@ -41,7 +41,7 @@ message SellShareRequest {
 }
 
 message SellShareResponse {
-    string status = 1;
+    int32 status = 1;
     string message = 2;
 }
 
@@ -53,7 +53,7 @@ message BuyShareRequest {
 }
 
 message BuyShareResponse {
-    string status = 1;
+    int32 status = 1;
     string message = 2;
 }
 
