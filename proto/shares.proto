@@ -17,8 +17,8 @@ message Share {
 
 //Get Company
 message Company {
-    string name = 1;
-    string industry = 2;
+    string name = 2;
+    string industry = 3;
 }
 
 message GetShareRequest {
@@ -32,6 +32,7 @@ message GetShareRequest {
 }
 
 message GetCompanyRequest {
+    string name = 1;
 }
 
 message GetCompanyResponse {
