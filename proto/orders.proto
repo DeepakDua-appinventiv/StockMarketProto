@@ -18,12 +18,6 @@ message Share {
     repeated string pendingShares = 4;
 }
 
-message SellShare {
-    string companyId = 1;
-    int32 sharesToSell = 2;
-    int32 askPrice = 3;
-}
-
 message GetShareRequest {
     string companyId = 1;
 }
@@ -37,7 +31,9 @@ message GetShareResponse {
 //SellShare
 message SellShareRequest {
     string userId = 1;
-    SellShare share = 2;
+    string companyId = 2;
+    int32 sharesToSell = 3;
+    int32 askPrice = 4;
 }
 
 message SellShareResponse {
