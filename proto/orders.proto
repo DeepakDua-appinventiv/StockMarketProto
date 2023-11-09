@@ -48,8 +48,8 @@ message SellShareResponse {
 //BuyShare
 message BuyShareRequest {
     string userId = 1;
-    string shareId = 2;
-    int32 qty = 3;
+    string sellOrderId = 2;
+    int32 numberOfSharesToBuy = 3;
 }
 
 message BuyShareResponse {
