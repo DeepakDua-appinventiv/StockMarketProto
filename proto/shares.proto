@@ -22,7 +22,8 @@ message Company {
 }
 
 message GetShareRequest {
-    string companyId = 1;
+    string userId = 1;
+    string companyId = 2;
 }
   
   message GetShareResponse {
