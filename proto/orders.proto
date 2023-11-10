@@ -19,6 +19,13 @@ message Share {
     repeated string pendingShares = 4;
 }
 
+message Investment {
+    string userId = 1;
+    string companyId = 2;
+    repeated string myShares = 3;
+    int32 totalInvestment = 4;
+}
+
 message GetShareRequest {
     string userId = 1;
     string companyId = 2;
@@ -36,7 +43,8 @@ message GetInvestmentRequest {
 
 message GetInvestmentResponse {
     int32 status = 1;
-    string message = 2;
+    repeated Investment investments = 2;
+    repeated string error = 3; 
 }
   
 //SellShare
