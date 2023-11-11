@@ -82,7 +82,6 @@ message GetBalanceRequest {
   message UpdateBalanceRequest {
     string userId = 1;
     int32 walletAmount = 2;
-    string serviceName = 3;
   }
   
   message UpdateBalanceResponse {
