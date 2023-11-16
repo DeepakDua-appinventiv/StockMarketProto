@@ -19,6 +19,7 @@ message Share {
 
 //Get Company
 message Company {
+    string _id = 1;
     string name = 2;
     string industry = 3;
 }
