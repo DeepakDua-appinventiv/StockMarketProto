@@ -5,7 +5,7 @@ package shares;
 service SharesService {
     rpc searchCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
     rpc getShare (GetShareRequest) returns (GetShareResponse) {}
-    rpc updateSharePrice (UpdateSharePriceRequest) returns (UpdateSharePriceResponse) {}
+    rpc updateShare (UpdateSharesRequest) returns (UpdateSharesResponse) {}
 }
 
 //Get Shares of a company
@@ -45,13 +45,18 @@ message GetCompanyResponse {
     repeated string error = 3;
 }
 
-message UpdateSharePriceRequest {
-    string companyId = 1;
-    repeated string shareIds = 2;
-    int32 purchasePrice = 3;
+message ShareUpdate {
+    string shareId = 1;
+    int32 purchasePrice = 2;
 }
 
-message UpdateSharePriceResponse {
+message UpdateSharesRequest {
+    string userId = 1;
+    repeated ShareUpdate sharesBought = 2;
+    int32 askPrice = 3;
+}
+
+message UpdateSharesResponse {
     int32 status = 1;
     string message = 2;
 }
