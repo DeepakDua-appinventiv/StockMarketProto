@@ -47,12 +47,12 @@ message GetCompanyResponse {
 
 message ShareUpdate {
     string shareId = 1;
-    int32 purchasePrice = 2;
 }
 
 message UpdateShareRequest {
     string userId = 1;
     repeated ShareUpdate sharesBought = 2;
+    int32 askPrice = 3;
 }
 
 message UpdateShareResponse {
