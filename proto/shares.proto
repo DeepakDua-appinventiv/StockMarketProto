@@ -53,7 +53,6 @@ message ShareUpdate {
 message UpdateSharesRequest {
     string userId = 1;
     repeated ShareUpdate sharesBought = 2;
-    int32 askPrice = 3;
 }
 
 message UpdateSharesResponse {
