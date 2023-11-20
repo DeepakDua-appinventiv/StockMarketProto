@@ -12,6 +12,10 @@ service UsersService {
 
   rpc forgetPassword (forgetPasswordRequest) returns (forgetPasswordRequest) {}
 
+  rpc resetPassword (resetPasswordRequest) returns (resetPasswordResponse) {}
+
+  rpc changePassword (changePasswordRequest) returns (changePasswordResponse) {}
+
   rpc Logout (LogoutRequest) returns (LogoutResponse) {}
 
 }
