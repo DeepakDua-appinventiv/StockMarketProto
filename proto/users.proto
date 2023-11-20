@@ -10,7 +10,7 @@ service UsersService {
 
   rpc Validate (ValidateRequest) returns (ValidateResponse) {}
 
-  rpc forgetPassword (forgetPasswordRequest) returns (forgetPasswordRequest) {}
+  rpc forgetPassword (forgetPasswordRequest) returns (forgetPasswordResponse) {}
 
   rpc resetPassword (resetPasswordRequest) returns (resetPasswordResponse) {}
 
