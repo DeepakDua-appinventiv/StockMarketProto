@@ -45,9 +45,9 @@ message GetInvestmentRequest {
 
 message GetInvestmentResponse {
     int32 status = 1;
-    int32 grandTotalInvestment = 4;
-    repeated Investment investments = 2;
-    repeated string error = 3; 
+    int32 grandTotalInvestment = 2;
+    repeated Investment investments = 3;
+    repeated string error = 4; 
 }
   
 //SellShare
