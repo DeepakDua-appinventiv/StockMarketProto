@@ -42,6 +42,7 @@ message GetShareResponse {
 
 message CheckAgreementStatusRequest {
     string userId = 1;
+    string sellOrderId = 2;
   }
   
   message CheckAgreementStatusResponse {
