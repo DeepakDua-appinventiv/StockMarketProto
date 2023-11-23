@@ -39,6 +39,14 @@ message GetShareResponse {
     repeated string error = 3; 
 }
 
+message CheckAgreementStatusRequest {
+    string userId = 1;
+  }
+  
+  message CheckAgreementStatusResponse {
+    bool status = 1;
+}
+
 message SubmitAgreementRequest {
     string fullName = 1;
     string address = 2;
