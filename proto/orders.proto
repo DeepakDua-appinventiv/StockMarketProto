@@ -5,6 +5,7 @@ package orders;
 service OrdersService {
     rpc getShare (GetShareRequest) returns (GetShareResponse) {}
     rpc sellShare (SellShareRequest) returns (SellShareResponse) {}
+    rpc SubmitAgreement (SubmitAgreementRequest) returns (SubmitAgreementResponse) {}
     rpc getMyInvestment (GetInvestmentRequest) returns (GetInvestmentResponse) {}
     rpc buyShare (BuyShareRequest) returns (BuyShareResponse) {}
     rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
