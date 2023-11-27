@@ -50,10 +50,9 @@ message CheckAgreementStatusRequest {
 }
 
 message SubmitAgreementRequest {
-    string sellOrderId = 1;
-    string fullName = 2;
-    string address = 3;
-    string signature = 4;
+    string userId = 1;
+    string sellOrderId = 2;
+    string signature = 3;
 }
 
   message SubmitAgreementResponse {
