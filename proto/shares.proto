@@ -31,8 +31,9 @@ message GetShareRequest {
   
   message GetShareResponse {
     int32 status = 1;
-    repeated Share shares = 2;
-    repeated string error = 3; 
+    string companyName = 2;
+    repeated Share shares = 3;
+    repeated string error = 4; 
 }
 
 message GetCompanyRequest {
