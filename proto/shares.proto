@@ -4,7 +4,7 @@ package shares;
 
 service SharesService {
     rpc searchCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
-    rpc getShare (GetShareRequest) returns (GetShareResponse) {}
+    rpc getShare (GetShareRequest) returns (GetShareResponse1) {}
     rpc updateShare (UpdateShareRequest) returns (UpdateShareResponse) {}
 }
 
