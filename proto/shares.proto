@@ -4,7 +4,7 @@ package shares;
 
 service SharesService {
     rpc searchCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
-    rpc getShare (GetShareRequest) returns (GetShareResponse1) {}
+    rpc getShare (GetShareRequest) returns (GetShareResponse) {}
     rpc updateShare (UpdateShareRequest) returns (UpdateShareResponse) {}
 }
 
@@ -27,7 +27,6 @@ message Company {
 message GetShareRequest {
     string userId = 1;
     string companyId = 2;
-    string sellOrderId = 3;
 }
   
   message GetShareResponse {
